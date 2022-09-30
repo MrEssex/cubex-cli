@@ -1,0 +1,21 @@
+{
+  "name": "mressex/cubex-cli",
+  "autoload": {
+    "psr-4": {
+      "MrEssex\\CubexCli\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Kyle Essex",
+      "email": "kylegavinessex@hotmail.com"
+    }
+  ],
+  "require": {
+    "cubex/framework": "^4.18",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  }
+}

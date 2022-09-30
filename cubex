@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+use Cubex\Cubex;
+use MrEssex\CubexCli\CliWrapper;
+
+$autoloader = __DIR__ . '/../../autoload.php';
+
+if(!file_exists($autoloader))
+{
+  $autoloader = './vendor/autoload.php';
+}
+$loader = require $autoloader;
+
+$app = new Cubex(__DIR__, $loader);
+
+// Initialize Cubex Cli App;
+CliWrapper::initialise($app);
+
+// Example registering external cli commands
+// CliWrapper::initialiseAlternativeRoot($app, 'mressex/cubex-translate');
+
+exit($app->cli());
